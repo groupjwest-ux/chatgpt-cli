@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  
+  <object class="GtkWindow" id="main_window">
+    <property name="default-width">720</property>
+    <property name="default-height">480</property>
+    <property name="title">ChatGPT GTK</property>
+
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <property name="spacing">6</property>
+
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+
+            <child>
+              <object class="GtkTextView" id="chat_view">
+                <property name="editable">false</property>
+                <property name="wrap-mode">word</property>
+                <property name="monospace">true</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkEntry" id="input_entry">
+            <property name="placeholder-text">Type your message…</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkButton" id="send_button">
+            <property name="label">Send</property>
+          </object>
+        </child>
+
+      </object>
+    </child>
+  </object>
+</interface>
+
